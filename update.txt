@@ -1,0 +1,18 @@
+const tempEmpId = "4050fff1-0bcd-4f69-9ea7-ccc5ae1969b6";
+const tempCertId = "a25bfc4b-de85-4991-b988-2f63559d0b03";
+
+var params = {
+  TableName: "Certifications",
+  Key: { Emp_ID: "35", Cert_ID: "40" },
+  UpdateExpression: "set #Date_Recieved = :Date_Received",
+  ExpressionAttributeNames: { "#Date_Recieved": "Date_Recieved" },
+  ExpressionAttributeValues: {
+    ":Date_Received": "08-24-2021",
+  },
+};
+
+dynamodb.update(params, function (err, data) {
+  if (err) console.log(err);
+  else console.log(data);
+});
+
