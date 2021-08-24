@@ -10,6 +10,8 @@ const certId = uuidv4();
 console.log(empId);
 console.log(certId);
 
+//Add item to table
+
 var params = {
   TableName: "Certifications",
   Item: {
@@ -27,6 +29,8 @@ dynamodb.put(params, function (err, data) {
   if (err) console.log(err);
   else console.log(data);
 });
+
+//Update item attributes
 
 // const tempEmpId = "6f8503ce-5d02-461f-a27c-292aea1ef378";
 // const tempCertId = "6f8503ce-5d02-461f-a27c-292aea1ef378";
