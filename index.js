@@ -20,7 +20,6 @@ var params = {
     Emp_name: "Billy Bob",
     Cert_Provider: "AWS",
     Cert_Name: "Solutions Architect",
-    Date_Started: "03-02-2020",
     Date_Recieved: "",
   },
 };
