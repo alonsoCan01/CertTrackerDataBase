@@ -4,23 +4,21 @@ AWS.config.update({ region: "us-east-2" });
 
 const dynamodb = new AWS.DynamoDB.DocumentClient();
 
-const empId = uuidv4();
 const certId = uuidv4();
 
-console.log(empId);
 console.log(certId);
 
 //Add item to table
 
 var params = {
-  TableName: "Certifications",
+  TableName: "amplify-certifications",
   Item: {
-    Emp_ID: `${empId}`,
+    Email: "jane.doe@neudesic.com",
     Cert_ID: `${certId}`,
-    Emp_name: "Billy Bob",
-    Cert_Provider: "AWS",
-    Cert_Name: "Solutions Architect",
-    Date_Recieved: "",
+    Emp_name: "Jane Doe",
+    Cert_Provider: "Azure",
+    Cert_Name: "AZ-204",
+    Date_Recieved: "01-05-2020",
   },
 };
 
